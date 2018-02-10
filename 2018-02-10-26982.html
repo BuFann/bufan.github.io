@@ -151,23 +151,23 @@
   <meta name="keywords" content="Keep going" />
 
 
-<meta name="description" content="LeetCode 463. Island Perimeter 根据题目描述，要求出小岛的边长。已知，一个cell的边长为4，一组相邻的cell会使得边长减少2。所以我们只需要计算出总的cell数量和总的相邻的cell组数就可以得出结果。总的cell数量只需要遍历整个数组即可得到。为了防止重复计算，总的相邻cell组数可以通过计算每一个cell的两个方向的邻居数量得到，比如下邻居和右邻居。">
+<meta name="description" content="LeetCode 387. First Unique Character in a String 按照题意，我们考虑一种直观的解法。  设置一个大小为26的int数组charCount，用来记录每个字符出现的次数。  第一次遍历字符串，对于每一个字符c，将charCount[c - &amp;#39;a&amp;#39;]自增1。  第二次遍历字符串，对于每一个下标i，如果该位置的字符对应的计数值为1，我们知道在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="463. Island Perimeter">
-<meta property="og:url" content="https://fanbu.github.io/2018-02-10-52311.html">
+<meta property="og:title" content="387. First Unique Character in a String">
+<meta property="og:url" content="https://fanbu.github.io/2018-02-10-26982.html">
 <meta property="og:site_name" content="Fan Bu&#39;s Blog">
-<meta property="og:description" content="LeetCode 463. Island Perimeter 根据题目描述，要求出小岛的边长。已知，一个cell的边长为4，一组相邻的cell会使得边长减少2。所以我们只需要计算出总的cell数量和总的相邻的cell组数就可以得出结果。总的cell数量只需要遍历整个数组即可得到。为了防止重复计算，总的相邻cell组数可以通过计算每一个cell的两个方向的邻居数量得到，比如下邻居和右邻居。">
-<meta property="og:updated_time" content="2018-02-10T17:41:25.498Z">
+<meta property="og:description" content="LeetCode 387. First Unique Character in a String 按照题意，我们考虑一种直观的解法。  设置一个大小为26的int数组charCount，用来记录每个字符出现的次数。  第一次遍历字符串，对于每一个字符c，将charCount[c - &amp;#39;a&amp;#39;]自增1。  第二次遍历字符串，对于每一个下标i，如果该位置的字符对应的计数值为1，我们知道在">
+<meta property="og:updated_time" content="2018-02-10T20:48:57.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="463. Island Perimeter">
-<meta name="twitter:description" content="LeetCode 463. Island Perimeter 根据题目描述，要求出小岛的边长。已知，一个cell的边长为4，一组相邻的cell会使得边长减少2。所以我们只需要计算出总的cell数量和总的相邻的cell组数就可以得出结果。总的cell数量只需要遍历整个数组即可得到。为了防止重复计算，总的相邻cell组数可以通过计算每一个cell的两个方向的邻居数量得到，比如下邻居和右邻居。">
+<meta name="twitter:title" content="387. First Unique Character in a String">
+<meta name="twitter:description" content="LeetCode 387. First Unique Character in a String 按照题意，我们考虑一种直观的解法。  设置一个大小为26的int数组charCount，用来记录每个字符出现的次数。  第一次遍历字符串，对于每一个字符c，将charCount[c - &amp;#39;a&amp;#39;]自增1。  第二次遍历字符串，对于每一个下标i，如果该位置的字符对应的计数值为1，我们知道在">
 
 
 
 
 
 
-  <link rel="canonical" href="https://fanbu.github.io/2018-02-10-52311.html"/>
+  <link rel="canonical" href="https://fanbu.github.io/2018-02-10-26982.html"/>
 
 
 
@@ -176,7 +176,7 @@
     sidebar: "",
   };
 </script>
-  <title>463. Island Perimeter | Fan Bu's Blog</title>
+  <title>387. First Unique Character in a String | Fan Bu's Blog</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fanbu.github.io/2018-02-10-52311.html">
+    <link itemprop="mainEntityOfPage" href="https://fanbu.github.io/2018-02-10-26982.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fan Bu">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">463. Island Perimeter</h1>
+          <h1 class="post-title" itemprop="name headline">387. First Unique Character in a String</h1>
         
 
         <div class="post-meta">
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-10T12:24:42-05:00">2018-02-10</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-10T14:52:24-05:00">2018-02-10</time>
             
 
             
@@ -393,8 +393,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018-02-10-52311.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018-02-10-52311.html" itemprop="commentsCount"></span>
+                <a href="/2018-02-10-26982.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018-02-10-26982.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -422,11 +422,31 @@
       
 
       
-        <p><a href="https://leetcode.com/problems/island-perimeter/" target="_blank" rel="noopener">LeetCode 463. Island Perimeter</a></p>
-<p>根据题目描述，要求出小岛的边长。已知，一个<code>cell</code>的边长为4，一组相邻的<code>cell</code>会使得边长减少2。所以我们只需要计算出总的<code>cell</code>数量和总的相邻的<code>cell</code>组数就可以得出结果。总的<code>cell</code>数量只需要遍历整个数组即可得到。为了防止重复计算，总的相邻<code>cell</code>组数可以通过计算每一个<code>cell</code>的两个方向的邻居数量得到，比如下邻居和右邻居。</p>
+        <p><a href="https://leetcode.com/problems/first-unique-character-in-a-string/" target="_blank" rel="noopener">LeetCode 387. First Unique Character in a String</a></p>
+<p>按照题意，我们考虑一种直观的解法。</p>
+<ul>
+<li><p>设置一个大小为26的<code>int</code>数组<code>charCount</code>，用来记录每个字符出现的次数。</p>
+</li>
+<li><p>第一次遍历字符串，对于每一个字符<code>c</code>，将<code>charCount[c - &#39;a&#39;]</code>自增1。</p>
+</li>
+<li><p>第二次遍历字符串，对于每一个下标<code>i</code>，如果该位置的字符对应的计数值为1，我们知道在整个字符串中这个字符只出现了一次，范围这个下标<code>i</code>即可。</p>
+</li>
+</ul>
 <a id="more"></a>
+<p>对应代码如下。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">firstUniqChar</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] charCount = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        charCount[s.charAt(i) - <span class="string">'a'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (charCount[s.charAt(i) - <span class="string">'a'</span>] == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的方法，遍历两边输入的字符串，时间复杂度是O(n)。考虑字符串很长但是字典很小的情况，我们可以做到只遍历一次字符串，然后遍历一次<code>count</code>数组，其中<code>count</code>数组的大小正比于字典长度。虽然这种方法的渐进时间复杂度也是O(n)，但是在字符串很长的情况下性能更好。</p>
+<p>具体方法如下。</p>
+<ul>
+<li><p>设置一个大小为26*2的<code>int[][]</code>数组<code>charCount</code>。其中<code>int[i][0]</code>表示对应<code>int</code>值为<code>i</code>的字符首次出现的位置，<code>int[i][1]</code>表示值为<code>i</code>的字符在字符串中出现的次数。</p>
+</li>
+<li><p>遍历字符串，填充<code>charCount</code>。</p>
+</li>
+<li><p>遍历<code>charCount</code>，找到并返回出现次数为<code>1</code>的字符首次出现的位置。</p>
+</li>
+</ul>
 <p>代码如下。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">islandPerimeter</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> islandCount = <span class="number">0</span>, neighborCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (grid[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                islandCount++;</span><br><span class="line">                <span class="keyword">if</span> (i + <span class="number">1</span> &lt; grid.length &amp;&amp; grid[i + <span class="number">1</span>][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                    neighborCount++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (j + <span class="number">1</span> &lt; grid[<span class="number">0</span>].length &amp;&amp; grid[i][j + <span class="number">1</span>] == <span class="number">1</span>) &#123;</span><br><span class="line">                    neighborCount++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> islandCount * <span class="number">4</span> - neighborCount * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">firstUniqChar</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[][] charCount = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>][];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; charCount.length; i++) &#123;</span><br><span class="line">        charCount[i] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        charCount[i][<span class="number">0</span>] = -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] charCountI = charCount[s.charAt(i) - <span class="string">'a'</span>];</span><br><span class="line">        <span class="keyword">if</span> (charCountI[<span class="number">0</span>] == -<span class="number">1</span>) &#123;</span><br><span class="line">            charCountI[<span class="number">0</span>] = i;</span><br><span class="line">            charCountI[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            charCountI[<span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> minPos = s.length();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; charCount.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (charCount[i][<span class="number">1</span>] == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (charCount[i][<span class="number">0</span>] &lt; minPos) &#123;</span><br><span class="line">                minPos = charCount[i][<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (minPos == s.length()) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> minPos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -450,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-02-09-25794.html" rel="next" title="4. Median of Two Sorted Arrays">
-                <i class="fa fa-chevron-left"></i> 4. Median of Two Sorted Arrays
+              <a href="/2018-02-10-10925.html" rel="next" title="448. Find All Numbers Disappeared in an Array">
+                <i class="fa fa-chevron-left"></i> 448. Find All Numbers Disappeared in an Array
               </a>
             
           </div>
@@ -459,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018-02-10-10925.html" rel="prev" title="448. Find All Numbers Disappeared in an Array">
-                448. Find All Numbers Disappeared in an Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
