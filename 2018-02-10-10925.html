@@ -431,11 +431,9 @@
 </ul>
 <p>考虑到数组下标从<code>0</code>开始，而数组元素的范围是从<code>1</code>开始，我们重新描述一下两次遍历的过程。</p>
 <ul>
-<li>
-<p>第一次遍历，对于数组中每一个下标为<code>i</code>的元素，我们将<code>nums[nums[i] - 1]</code>置为它对应的负值。</p>
+<li><p>第一次遍历，对于数组中每一个下标为<code>i</code>的元素，我们将<code>nums[nums[i] - 1]</code>置为它对应的负值。</p>
 </li>
-<li>
-<p>第二次遍历，对于数组中每一个下标为<code>i</code>的元素，如果<code>nums[i]</code>不为负值，那么将<code>i + 1</code>加入到结果数组中。</p>
+<li><p>第二次遍历，对于数组中每一个下标为<code>i</code>的元素，如果<code>nums[i]</code>不为负值，那么将<code>i + 1</code>加入到结果数组中。</p>
 </li>
 </ul>
 <p>代码如下。</p>

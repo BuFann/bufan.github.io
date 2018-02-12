@@ -366,6 +366,24 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -686,14 +704,11 @@
           <p><a href="https://leetcode.com/problems/first-unique-character-in-a-string/" target="_blank" rel="noopener">LeetCode 387. First Unique Character in a String</a></p>
 <p>按照题意，我们考虑一种直观的解法。</p>
 <ul>
-<li>
-<p>设置一个大小为26的<code>int</code>数组<code>charCount</code>，用来记录每个字符出现的次数。</p>
+<li><p>设置一个大小为26的<code>int</code>数组<code>charCount</code>，用来记录每个字符出现的次数。</p>
 </li>
-<li>
-<p>第一次遍历字符串，对于每一个字符<code>c</code>，将<code>charCount[c - 'a']</code>自增1。</p>
+<li><p>第一次遍历字符串，对于每一个字符<code>c</code>，将<code>charCount[c - &#39;a&#39;]</code>自增1。</p>
 </li>
-<li>
-<p>第二次遍历字符串，对于每一个下标<code>i</code>，如果该位置的字符对应的计数值为1，我们知道在整个字符串中这个字符只出现了一次，范围这个下标<code>i</code>即可。</p>
+<li><p>第二次遍历字符串，对于每一个下标<code>i</code>，如果该位置的字符对应的计数值为1，我们知道在整个字符串中这个字符只出现了一次，范围这个下标<code>i</code>即可。</p>
 </li>
 </ul>
           <!--noindex-->
