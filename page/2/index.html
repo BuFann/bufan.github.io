@@ -158,23 +158,19 @@
   <meta name="keywords" content="Keep going" />
 
 
-<meta name="description" content="LeetCode 4. Median of Two Sorted Arrays 按照题目描述，我们要求出两个已排序数组的中位数。 先上代码。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="4. Median of Two Sorted Arrays">
-<meta property="og:url" content="https://fanbu.github.io/2018-02-09-25794.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fan Bu&#39;s Blog">
+<meta property="og:url" content="https://fanbu.github.io/page/2/index.html">
 <meta property="og:site_name" content="Fan Bu&#39;s Blog">
-<meta property="og:description" content="LeetCode 4. Median of Two Sorted Arrays 按照题目描述，我们要求出两个已排序数组的中位数。 先上代码。">
-<meta property="og:updated_time" content="2018-02-10T17:34:25.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="4. Median of Two Sorted Arrays">
-<meta name="twitter:description" content="LeetCode 4. Median of Two Sorted Arrays 按照题目描述，我们要求出两个已排序数组的中位数。 先上代码。">
+<meta name="twitter:title" content="Fan Bu&#39;s Blog">
 
 
 
 
 
 
-  <link rel="canonical" href="https://fanbu.github.io/2018-02-09-25794.html"/>
+  <link rel="canonical" href="https://fanbu.github.io/page/2/"/>
 
 
 
@@ -183,7 +179,7 @@
     sidebar: "",
   };
 </script>
-  <title>4. Median of Two Sorted Arrays | Fan Bu's Blog</title>
+  <title>Fan Bu's Blog</title>
   
 
 
@@ -239,7 +235,8 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -318,9 +315,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -335,7 +332,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://fanbu.github.io/2018-02-09-25794.html">
+    <link itemprop="mainEntityOfPage" href="https://fanbu.github.io/2018-02-05-53281.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fan Bu">
@@ -352,7 +349,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">4. Median of Two Sorted Arrays</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018-02-05-53281.html" itemprop="url">总结二分查找</a></h1>
         
 
         <div class="post-meta">
@@ -364,7 +363,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-09T18:25:23-05:00">2018-02-09</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-05T15:02:02-05:00">2018-02-05</time>
             
 
             
@@ -395,16 +394,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018-02-09-25794.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018-02-09-25794.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -429,24 +418,16 @@
       
 
       
-        <p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank" rel="noopener">LeetCode 4. Median of Two Sorted Arrays</a></p>
-<p>按照题目描述，我们要求出两个已排序数组的中位数。</p>
-<p>先上代码。</p>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = nums1.length, n = nums2.length;</span><br><span class="line">    <span class="keyword">if</span> (m &gt; n) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = m;</span><br><span class="line">        m = n;</span><br><span class="line">        n = temp;</span><br><span class="line">        <span class="keyword">int</span>[] tempList = nums1;</span><br><span class="line">        nums1 = nums2;</span><br><span class="line">        nums2 = tempList;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = m - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> halfLen = (m + n + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> j = halfLen - mid;</span><br><span class="line">        <span class="keyword">if</span> (mid &gt; <span class="number">0</span> &amp;&amp; nums1[mid - <span class="number">1</span>] &gt; nums2[j]) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (mid &lt; m &amp;&amp; nums1[mid] &lt; nums2[j - <span class="number">1</span>]) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            left = mid;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> midLeft1 = left &gt;= <span class="number">1</span> ? nums1[left - <span class="number">1</span>] : nums2[halfLen - left - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> midLeft2 = halfLen - left &gt;= <span class="number">1</span> ? nums2[halfLen - left - <span class="number">1</span>] : nums1[left - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> midLeft = midLeft1 &gt; midLeft2 ? midLeft1 : midLeft2;</span><br><span class="line">    <span class="keyword">int</span> midRight;</span><br><span class="line">    <span class="keyword">if</span> ((m + n) % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">        midRight = midLeft;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">int</span> midRight1 = left &lt; m ? nums1[left] : nums2[halfLen - left];</span><br><span class="line">        <span class="keyword">int</span> midRight2 = halfLen - left &lt; n ? nums2[halfLen - left] : nums1[left];</span><br><span class="line">        midRight = midRight1 &lt; midRight2 ? midRight1 : midRight2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ((<span class="keyword">double</span>) midLeft + (<span class="keyword">double</span>) midRight) / <span class="number">2.0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>考虑这个题目。一种直观的解法是先计算出两个数组的总长度，然后根据数组的长度同时遍历两个数组，直到找到目标元素，并计算出中位数。但是这种方法的时间复杂度是O(n)。考虑更快的算法，因为两个数组已经经过排序，所以二分查找可能会有更好的性能。参考LeetCode的<a href="https://leetcode.com/problems/median-of-two-sorted-arrays/solution/" target="_blank" rel="noopener">答案</a>。</p>
-<p>这种解法的基本想法是对其中一个数组进行二分搜索，由于要寻找中位数，所以两个数组的下标<code>i</code>和<code>j</code>，两个数组的长度<code>m</code>和<code>n</code>，满足<code>i + j == (m + n + 1) / 2</code>。所以移动<code>i</code>相应的<code>j</code>也会自动移动。而我们搜索的条件是，找到合理的<code>i</code>和<code>j</code>，使得<code>nums1[i - 1] &lt; nums2[j]</code>和<code>nums2[j - 1] &lt; nums1[i]</code>同时成立。</p>
-<p>代码可以分成三部分。</p>
-<ul>
-<li><p>第一部分，判断并且交换两个数组，使得<code>nums1</code>的长度比<code>nums2</code>小。这样做是为了计算出的<code>nums2</code>的下标不会为负。</p>
-</li>
-<li><p>第二部分，对数组<code>nums1</code>进行二分搜索，找出满足条件的下标值，在代码中是<code>left</code>，使得两个数组满足上述条件。</p>
-</li>
-<li><p>第三部分，根据找到的两个数组的下标，判断越界情况，并且根据数组长度的奇偶性计算出最后的中位数值。</p>
-</li>
-</ul>
-<p>这道题目的思路简单，关键在于合理处理下标，判断越界情况，得出正确结果。</p>
-
+        
+          <p>二分查找看似简单，实际要一次AC如果不刻意练习还是很难。我把二分查找的各种情况和各种写法总结一下，类似茴字的四种写法。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018-02-05-53281.html#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -466,32 +447,12 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018-02-05-53281.html" rel="next" title="总结二分查找">
-                <i class="fa fa-chevron-left"></i> 总结二分查找
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018-02-10-52311.html" rel="prev" title="463. Island Perimeter">
-                463. Island Perimeter <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -501,26 +462,18 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
           
-
-  
-    <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
-    </div>
-
-  
-
-
 
         </div>
         
@@ -721,10 +674,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
-
-
 
   
 
@@ -762,59 +711,37 @@
         <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
         <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
     
-<!-- END LOCAL -->
+<!-- END LOCAL --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
     
 
     
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: 'fanbu',
-            repo: 'comment',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-                redirect_protocol: 'https',
-            
-            
-                client_secret: '48d69e3c55007ca251fdc00a9e9b653669c4e202',
-            
-                client_id: 'bcf0520633f4911f8f3b'
-            }});
-        gitment.render('gitment-container');
-      }
 
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    
       
-      renderGitment();
-      
-      </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
   
 
   
