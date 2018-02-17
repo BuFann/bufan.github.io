@@ -164,7 +164,7 @@
 <meta property="og:url" content="https://fanbu.github.io/2018-02-12-39274.html">
 <meta property="og:site_name" content="Fan Bu&#39;s Blog">
 <meta property="og:description" content="LeetCode 326. Power of Three 如题所述，对于判断一个数$n$是否是任意一个质数$a$的指数的问题，我们都可以用以下方法来求。  找到整数范围内能表示的最大的这个质数的指数$max$。  用$max$对$n$取模，如果模为0则结果为真，否则结果为假。   代码如下。">
-<meta property="og:updated_time" content="2018-02-13T03:25:19.261Z">
+<meta property="og:updated_time" content="2018-02-17T21:14:59.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="326. Power of Three">
 <meta name="twitter:description" content="LeetCode 326. Power of Three 如题所述，对于判断一个数$n$是否是任意一个质数$a$的指数的问题，我们都可以用以下方法来求。  找到整数范围内能表示的最大的这个质数的指数$max$。  用$max$对$n$取模，如果模为0则结果为真，否则结果为假。   代码如下。">
@@ -440,7 +440,7 @@
 <p>代码如下。</p>
 <a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfThree</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> max = (<span class="keyword">int</span>) Math.pow(<span class="number">3</span>, (<span class="keyword">int</span>) (Math.log(Integer.MAX_VALUE) / Math.log(<span class="number">3</span>)));</span><br><span class="line">    <span class="keyword">return</span> n &gt; <span class="number">0</span> &amp;&amp; max % n == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>为什么要求$a$必须为指数，原因是如果$a$不为质数，那么这个判断会将不符合条件的数误判为真。例如：$a = 9$，$n = 27$，显然$n$不是$a$的指数。假设$max$是<code>int</code>范围内，最大的$a$的指数，那么 $max= 9^b$。$max \mod n = (3^{2b}) \mod (3^3) = 0$，从而得出错误结果。</p>
+<p>为什么要求$a$必须为质数，原因是如果$a$不为质数，那么这个判断会将不符合条件的数误判为真。例如：$a = 9$，$n = 27$，显然$n$不是$a$的指数。假设$max$是<code>int</code>范围内，最大的$a$的指数，那么 $max= 9^b$。$max \mod n = (3^{2b}) \mod (3^3) = 0$，从而得出错误结果。</p>
 
       
     </div>
